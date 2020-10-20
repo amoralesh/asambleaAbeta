@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Laravel</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+
+
+        <!-- Styles -->
+        <style>
+            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
+        </style>
+
+        <style>
+            body {
+                font-family: 'Nunito';
+            }
+        </style>
+        	<style type="text/css">
+                h2, h3 { margin-top:0; }
+                form { margin-top: 15px; }
+                form > input { margin-right: 15px; }
+                #results {    float:right; margin:20px; padding:10px; border:1px solid; background:#ccc; }
+            </style>
+    </head>
+    <body class="antialiased">
+
+        <div class="container">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Nueva Votación</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Mis Votaciones <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Lo mas votado</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Más conferencias
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Conferecencia 1</a>
+                        <a class="dropdown-item" href="#">Conferecencia 2</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Conferecencia 3</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disponibles</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                  </form>
+                </div>
+              </nav>
+
+
+            <form>
+                <h1>Por favor vota</h1>
+
+                <p>1.¿Crees que es mejor ionic que flutter? :)</p>
+                <div class="row mt-5">
+                    <div class="col-2">
+                        <div class="form-group radio">
+                            <label><input type="radio" name="tuVotacion"  value="1" class="votacion"><img src="https://pngimg.com/uploads/like/like_PNG55.png" class="rounded float-left img-fluid" alt="" id="aFavor"></label>
+                        <label for="aFavor">A favor</label>
+                    </div>
+                </div>
+
+                    <div class="offset-4 col-2">
+                        <div class="form-group">
+                            <label><input type="radio" name="tuVotacion" class="votacion"  value="2"><img src="data:image/png;base64,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" class="rounded float-right img-fluid " alt="" id="enContra"></label>
+                              <label for="enContra">En Contra</label>
+                        </div>
+                   </div>
+                </div>
+<button class="btn btn-dark mt-5 votacion" type="button">Enviar respuesta</button>
+              
+              </form>
+
+              <div class="row mt-5">
+                  <div class="col-12">
+                   <a href="index.html"> <button class="btn btn-danger mt-5" type="button">Regresar</button></a>
+                  </div>
+              </div>
+
+        </div>
+       
+   
+
+
+
+
+
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+
+ 
+<script>
+$(".votacion").click(function (e) { 
+ 
+
+    var  respuesta=	$('input:radio[name=tuVotacion]:checked').val();
+
+    if(respuesta==1){
+        respuesta="A Favor"
+    }else{
+        respuesta="En Contra"
+    }
+    
+
+
+   Swal.fire({
+  title: 'Confirmar respuesta por favor',
+  text: "Su respuesta es: " + respuesta,
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  cancelButtonText: 'Cancelar',
+  confirmButtonText: 'Es correcto'
+}).then((result) => {
+  if (result.isConfirmed) {
+
+    (async () => {
+     const { value: contrasena } =  await   Swal.fire({
+  title: 'Confirma tu identidad',
+  text: "Introduce tu contraseña con la que entraste",
+  input: 'text',
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  cancelButtonText: 'Cancelar',
+  confirmButtonText: 'Enviar'
+})
+if (contrasena) {
+  Swal.fire(
+      'Exito!',
+      'Su respuesta fue aceptada',
+      'success'
+    )
+}
+})()
+  
+  }//fin if 
+}) 
+});
+
+
+</script>
+
+
+    </body>
+</html>
